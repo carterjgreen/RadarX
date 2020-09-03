@@ -146,7 +146,7 @@ class ADC:
     
     
     def clutter(self, on=True, clutter_power=10):
-        if on and self. EL == 1:
+        if on and self.EL == 1:
             clutter = np.ones((1, self.L)) * np.sqrt(np.power(clutter_power/10, 10)*self.noise_var*2)
         else:
             clutter = 0
