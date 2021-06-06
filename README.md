@@ -4,7 +4,9 @@ Python/NumPy port of Dr. Joey Bray's Radar-X 2019 Operation REDSHIELD - Transpor
 
 Written during the Summer of 2020 as I was learning how to use object-oriented programming and NumPy after losing a license for MATLAB. Now published (unfinished) to GitHub in June 2021.
 
-radarProc.py introduces a Target class and an ADC class. The target class is essentially a struct to hold information about a target such as it's radial speed, elecation and SNR. Targets are created and then added to the ADC class. The ADC class keeps track of simulation time and locations of the targets (calculated upon each reading of the ADC). Reading the ADC will give an I/Q sample of the Pulse-Doppler Radar. Coherent processing intervals were not fully implemented.
+radarProc.py introduces a Target class and an ADC class. The target class is essentially a struct to hold information about a target such as it's radial speed, elecation and SNR. Targets are created and then added to the ADC class. The ADC class keeps track of simulation time and locations of the targets (calculated upon each reading of the ADC). Reading the ADC will give an I/Q sample of the Pulse-Doppler Radar. Coherent processing intervals were not fully implemented. 
+
+Compared to the original I have not made the targets private in Python. For the labs and final exercise in EEE474 the ADC scripts were provided as MATLAB .p files so that information about the targets were hidden from students.
 
 As students we had to create a radar processor for a simulated pulse-Doppler radar. The processor had to disambiguate targets in range and speed (Doppler), use M-of-N binary integration, and, electronically steer a beam in azimuth. I have reimplemented some of this in the ADC_tests.ipynb notebook and included some of my group's original MATLAB scripts.
 
